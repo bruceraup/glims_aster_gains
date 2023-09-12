@@ -28,7 +28,7 @@ for the GLIMS Project")
 /*******************************************************************
                    getastergainnumb
 *******************************************************************/
-float getastergainnumb( float doy, float lat, short band, short node ) {
+float getastergainnumb( float doy, float lat, short band, short node, float asc_node_time ) {
   float l, inputrad, lsatur, percent, rtnval;
   int i, result;
   float *gains;
@@ -52,7 +52,7 @@ float getastergainnumb( float doy, float lat, short band, short node ) {
   static float answers[] = { 1.0, 2.0, 3.0, 4.0, 5.0, 0.0 };
   /* corresponds to ['high', 'norm', 'low1', 'low2', 'bryt', 'dark'] */
 
-  l = getsolarirrad(band) * getsnowref(band) * getcosi(doy,lat,node) / PI;
+  l = getsolarirrad(band) * getsnowref(band) * getcosi(doy,lat,node,asc_node_time) / PI;
   switch (band) {
     case 1: gains = gain_options1; break;
     case 2: gains = gain_options2; break;
@@ -225,7 +225,7 @@ Inputs:  doy       day of year
 This routine includes calculation of ASTER's orbit to find the time
 of day when the satellite crosses the input latitude.
 ***/
-float getcosi( float doy, float lat, short node ) {
+float getcosi( float doy, float lat, short node, float asc_node_time ) {
   float deg2rad, radlat, dec, ltime, timeangle, cosi, anom;
 
   deg2rad = PI / 180.0;
@@ -233,7 +233,7 @@ float getcosi( float doy, float lat, short node ) {
   radlat = lat * deg2rad;
 
   dec = deg2rad * getdec( doy );
-  ltime = localtime( ORBIT_DEC, ASC_NODE_TIME, node, lat, &anom );
+  ltime = localtime( ORBIT_DEC, asc_node_time, node, lat, &anom );
 
   timeangle = PI * (ltime/12.0 - 1.0);
 
