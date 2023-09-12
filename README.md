@@ -37,7 +37,6 @@ Band 6:  Gain:  1.486456  (high gain at 48.65% saturation)
 Band 7:  Gain:  1.701994  (high gain at 70.20% saturation)
 Band 8:  Gain:  1.585633  (high gain at 58.56% saturation)
 Band 9:  Gain:  1.550712  (high gain at 55.07% saturation)
-
 ```
 
 # Background Reference
@@ -47,4 +46,3 @@ Raup, Bruce H., Hugh H. Kieffer, Trent M. Hare, and Jeffrey S. Kargel
 Instrument for Monitoring a Globally Distributed Target: Glaciers." IEEE
 Transactions On Geoscience and Remote Sensing 38:1105--1112.
 http://cires.colorado.edu/~braup/pubs/xargenIEEE.pdf
-
