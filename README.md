@@ -1,7 +1,13 @@
+# GLIMS ASTER Gains
+
 This program calculates gain settings for the ASTER instrument that are
 optimized for snowy regions.  To compile:
 
   gcc -o testgain testgain.c gainutils.c -lm
+
+or type
+
+  make build
 
 For more information about these calculations, see
 
