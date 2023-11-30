@@ -100,7 +100,7 @@ def main():
     today = dt.date.today().isoformat()
 
     infile = 'GLIMS_STARs_01Jan23-31Dec23(STARTool)_Final.csv'
-    outfile = f'GLIMS_STARs_Raup_{today}.csv'
+    outfile = f'GLIMS_STARs_Raup_Kargel_{today}.csv'
 
     current_eq_crossing_time = 21.75
 
