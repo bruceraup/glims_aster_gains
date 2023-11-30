@@ -39,6 +39,10 @@ Band 8:  Gain:  1.585633  (high gain at 58.56% saturation)
 Band 9:  Gain:  1.550712  (high gain at 55.07% saturation)
 ```
 
+# Web Service
+
+This code is behind a web service (http://www.glims.org/tools/aster_gain/), which can be accessed through a browser form or via a program like `curl`.
+
 # Background Reference
 
 Raup, Bruce H., Hugh H. Kieffer, Trent M. Hare, and Jeffrey S. Kargel
