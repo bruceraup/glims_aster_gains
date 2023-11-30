@@ -9,17 +9,6 @@ import urllib.request
 from tqdm import tqdm
 
 
-infile = 'GLIMS_STARs_01Jan23-31Dec23(STARTool)_Final.csv'
-outfile = 'GLIMS_STARs_Raup_20231129.csv'
-
-current_eq_crossing_time = 21.75
-
-dt1_col = 38
-dt2_col = 39
-points_start_col = 49
-gains_start_col = 17
-
-
 def gain_col(band=1):
     # column numbers are zero-based.
     # Band numbers are one-based.
@@ -107,6 +96,18 @@ def date_field_to_date(datetime_str):
 
 
 def main():
+
+    today = dt.date.today().isoformat()
+
+    infile = 'GLIMS_STARs_01Jan23-31Dec23(STARTool)_Final.csv'
+    outfile = f'GLIMS_STARs_Raup_{today}.csv'
+
+    current_eq_crossing_time = 21.75
+
+    dt1_col = 38
+    dt2_col = 39
+    points_start_col = 49
+    gains_start_col = 17
 
     with open(infile , 'r') as in_fh:
         in_reader = csv.reader(in_fh, delimiter='|', quotechar='^')
