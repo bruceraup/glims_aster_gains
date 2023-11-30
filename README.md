@@ -1,7 +1,8 @@
 # GLIMS ASTER Gains
 
-This program calculates gain settings for the ASTER instrument that are
-optimized for snowy regions.  To compile:
+The main program in this repository, `glims_aster_gains.c`, calculates gain
+settings for the ASTER instrument that are optimized for snowy regions.  To
+compile:
 
   gcc -o testgain testgain.c gainutils.c -lm
 
@@ -9,7 +10,7 @@ or type
 
   make build
 
-# Example Runs
+## Example Runs
 
 ```
 # With no arguments, the program prints a usage summary
@@ -41,12 +42,24 @@ Band 9:  Gain:  1.550712  (high gain at 55.07% saturation)
 
 # Web Service
 
-This code is behind a web service (http://www.glims.org/tools/aster_gain/), which can be accessed through a browser form or via a program like `curl`.
+The program `glims_aster_gains.c` is behind a web service (http://www.glims.org/tools/aster_gain/), which can be accessed through a browser form or via a program like `curl`.
+
+# Adjustments to gains late in ASTER's mission
+
+As of late 2023, ASTER's (Terra's) orbit has drifted such that the equator crossing time has changed from 10:30 (descending node) / 22:30 (ascending node) to
+9:45 (descending node) / 21:45 (ascending node).  The Python program `create_new_gains_STAR.py` reads Science Team Acquisition Requests (STARs)
+from the CSV file (see code for name) and writes another CSV file with gains adjusted.  These will go into effect for GLIMS image acquisitions
+at the start of 2024.  `create_new_gains_STAR.py` is a standalone command-line program, but it uses the above-mentioned Web service to get the gains for each
+STAR entry, based on latitude and the new equator crossing time.
 
 # Background Reference
 
-Raup, Bruce H., Hugh H. Kieffer, Trent M. Hare, and Jeffrey S. Kargel
-(2000). "Generation of Data Acquisition Requests for the ASTER Satellite
-Instrument for Monitoring a Globally Distributed Target: Glaciers." IEEE
-Transactions On Geoscience and Remote Sensing 38:1105--1112.
-http://cires.colorado.edu/~braup/pubs/xargenIEEE.pdf
+* Raup, Bruce H., Hugh H. Kieffer, Trent M. Hare, and Jeffrey S. Kargel
+  (2000). "Generation of Data Acquisition Requests for the ASTER Satellite
+  Instrument for Monitoring a Globally Distributed Target: Glaciers." IEEE
+  Transactions On Geoscience and Remote Sensing 38:1105--1112.
+  http://cires.colorado.edu/~braup/pubs/xargenIEEE.pdf
+
+* ASTER Level-1 Data Processing ATBD (Algorithm Theoretical Basis Document), included in this repository.
+
+
