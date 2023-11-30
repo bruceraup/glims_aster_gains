@@ -1,0 +1,73 @@
+Requester ID
+xAR Title
+XAR type
+Investigation Class
+Scientific Objective
+Ground Campaign
+Implementation Urgency
+SSSG-Active
+User-Active
+Coverage Method
+ Sample length (Min.)
+ Sample length (Max.)
+Number of samples
+Coverage amount required
+Allow Cross-Track Fragmentation
+Require Full Duration Observations Across AOI
+Instrument Mode
+Band gain setting (VNIR1)
+Band gain setting (VNIR2)
+Band gain setting (VNIR3)
+Band gain setting (SWIR0)
+Band gain setting (SWIR5)
+Band gain setting (SWIR6)
+Band gain setting (SWIR7)
+Band gain setting (SWIR8)
+Band gain setting (SWIR9)
+Day/Night
+Sun Angle(Min.)
+Sun Angle(Max.)
+Pointing
+Specific Look Angle
+Specific View Swath
+Range-Look Angle (Min.)
+Range-Look Angle (Max.)
+Look Angle Absolute Flag
+Avoid Clouds
+Coverage
+Multiple Observation=2
+Lifetime (Start)
+Lifetime (End)
+AW Duration (days)
+AW Repeat Cycle =
+Expedited Data
+Justification for Expedited Data
+Level 1B Process
+Map Projection
+Re-sampling
+Commetns
+AOI Points
+AOI Points1 (Lon.- Lat.)
+AOI Points2 (Lon.- Lat.)
+AOI Points3 (Lon.- Lat.)
+AOI Points4 (Lon.- Lat.)
+AOI Points5 (Lon.- Lat.)
+AOI Points6 (Lon.- Lat.)
+AOI Points7 (Lon.- Lat.)
+AOI Points8 (Lon.- Lat.)
+AOI Points9 (Lon.- Lat.)
+AOI Points10 (Lon.- Lat.)
+AOI Points11 (Lon.- Lat.)
+AOI Points12 (Lon.- Lat.)
+AOI Points13 (Lon.- Lat.)
+AOI Points14 (Lon.- Lat.)
+AOI Points15 (Lon.- Lat.)
+AOI Points16 (Lon.- Lat.)
+AOI Points17 (Lon.- Lat.)
+AOI Points18 (Lon.- Lat.)
+AOI Points19 (Lon.- Lat.)
+AOI Points20 (Lon.- Lat.)
+AOI Points21 (Lon.- Lat.)
+AOI Points22 (Lon.- Lat.)
+AOI Points23 (Lon.- Lat.)
+AOI Points24 (Lon.- Lat.)
