@@ -107,7 +107,7 @@ def main():
     infile = 'GLIMS_STARs_01Jan23-31Dec23(STARTool)_Final.csv'
     outfile = f'GLIMS_STARs_Raup_Kargel_{today}.csv'
 
-    current_eq_crossing_time = 21.75
+    current_eq_crossing_time = 21.667
 
     dt1_col = 38
     dt2_col = 39
