@@ -52,6 +52,14 @@ from the CSV file (see code for name) and writes another CSV file with gains adj
 at the start of 2024.  `create_new_gains_STAR.py` is a standalone command-line program, but it uses the above-mentioned Web service to get the gains for each
 STAR entry, based on latitude and the new equator crossing time.
 
+# Script to call web service
+
+The script `create_new_gains_STAR.py` repeatedly calls the above-described web
+service to calculate gains for times and locations in an input spreadsheet.
+This particular code does so for a spreadsheet provided by Jeff Kargel
+to update the Data Acquisition Requests for the ASTER system.  The
+gains are inserted into a new spreadsheet created as output.
+
 # Background Reference
 
 * Raup, Bruce H., Hugh H. Kieffer, Trent M. Hare, and Jeffrey S. Kargel
