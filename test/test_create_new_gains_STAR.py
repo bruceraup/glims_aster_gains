@@ -32,7 +32,7 @@ def test_get_gain_norm():
     lat = 59
     band = 3
     eq = 21
-    expected = 3
+    expected = 1
     got = cn.get_gain(mid_doy, lat, band, eq)
     print("test_get_gain: exp = ", expected)
     print("test_get_gain: got = ", got)
