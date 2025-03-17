@@ -5,6 +5,7 @@ import datetime as dt
 import re
 import csv
 import urllib.request
+from subprocess import check_output
 
 from tqdm import tqdm
 
@@ -95,6 +96,10 @@ def date_field_to_date(datetime_str):
     return dt1
 
 
+def wc(filename):
+    return int(check_output(['wc', '-l', filename]).split()[0])
+
+
 def main():
 
     today = dt.date.today().isoformat()
@@ -109,13 +114,16 @@ def main():
     points_start_col = 49
     gains_start_col = 17
 
+    numlines = wc(infile)
+    print(f'{infile} has {numlines} lines.')
+
     with open(infile , 'r') as in_fh:
         in_reader = csv.reader(in_fh, delimiter='|', quotechar='^')
 
         with open(outfile, 'w') as out_fh:
             out_writer = csv.writer(out_fh, delimiter='|', quotechar='^')
 
-            for row in tqdm(in_reader, desc='Looping through rows: ', total=1888, ascii=True):
+            for row in tqdm(in_reader, desc='Looping through rows: ', total=numlines, ascii=True):
                 if 'Lifetime' in row[dt1_col]:
                     out_writer.writerow(row)
                     continue
