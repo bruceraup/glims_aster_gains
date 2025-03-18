@@ -5,7 +5,7 @@ import datetime as dt
 import re
 import csv
 import urllib.request
-from subprocess import check_output
+from subprocess import run
 
 from tqdm import tqdm
 
@@ -97,7 +97,7 @@ def date_field_to_date(datetime_str):
 
 
 def wc(filename):
-    return int(check_output(['wc', '-l', filename]).split()[0])
+    return int(run(['wc', '-l', filename], capture_output=True).stdout.split()[0])
 
 
 def main():
